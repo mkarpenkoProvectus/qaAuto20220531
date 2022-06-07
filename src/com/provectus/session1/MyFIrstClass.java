@@ -60,7 +60,7 @@ public class MyFIrstClass {
     int integer = 5;
     int intR = integer + 2;
 
-    Integer integer1 = Integer.valueOf("4");
+//    Integer integer1 = Integer.valueOf("4");
 
 
     int X = 10;
