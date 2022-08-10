@@ -1,0 +1,43 @@
+package com.provectus.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+/**
+ * @author Maxim Karpenko mkarpenko@modeln.com
+ */
+
+public class SecurePage extends BasePage {
+  private final By byLogoutButton = By.cssSelector("a.button");
+//  private WebElement logoutButton = driver.findElement(By.cssSelector("a.button"));
+
+  @FindBy(css = "a.button")
+  private WebElement logoutButton;
+
+  @FindBy(tagName = "h2")
+  private WebElement pageTitle;
+
+  @FindBy(css = ".flash.success")
+  private WebElement alert;
+
+  public SecurePage(WebDriver driver) {
+    super(driver);
+    PageFactory.initElements(driver, this);
+  }
+
+  public LoginPage logout() {
+    logoutButton.click();
+    return new LoginPage(driver);
+  }
+
+  public String getPageTitle() {
+    return pageTitle.getText();
+  }
+
+  public String getAlertText() {
+    return alert.getText();
+  }
+}
