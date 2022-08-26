@@ -1,0 +1,19 @@
+package com.provectus.singlton;
+
+/**
+ * @author Maxim Karpenko mkarpenko@modeln.com
+ */
+
+public class Singleton {
+  private static Singleton object;
+
+  private Singleton() {}
+
+
+  public static Singleton getObject(){
+    if (object==null) {
+      object = new Singleton();
+    }
+    return object;
+  }
+}

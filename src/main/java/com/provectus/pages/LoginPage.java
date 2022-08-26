@@ -13,8 +13,7 @@ public class LoginPage extends BasePage {
   private final By byPassword = By.id("password");
   private final By byLoginButton = By.cssSelector("button[type='submit']");
 
-  public LoginPage(WebDriver driver) {
-    super(driver);
+  public LoginPage() {
   }
 
   public LoginPage setUsername(String username) {
@@ -33,12 +32,12 @@ public class LoginPage extends BasePage {
 
   public SecurePage clickLoginButton() {
     driver.findElement(byLoginButton).click();
-    return new SecurePage(driver);
+    return new SecurePage();
   }
 
   public LoginPage clickLoginWithIncorrectCreds() {
     driver.findElement(byLoginButton).click();
-    return new LoginPage(driver);
+    return new LoginPage();
   }
 
   public SecurePage login(String username, String password) {

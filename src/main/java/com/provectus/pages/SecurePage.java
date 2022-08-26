@@ -23,14 +23,14 @@ public class SecurePage extends BasePage {
   @FindBy(css = ".flash.success")
   private WebElement alert;
 
-  public SecurePage(WebDriver driver) {
-    super(driver);
+  public SecurePage() {
+    super();
     PageFactory.initElements(driver, this);
   }
 
   public LoginPage logout() {
     logoutButton.click();
-    return new LoginPage(driver);
+    return new LoginPage();
   }
 
   public String getPageTitle() {

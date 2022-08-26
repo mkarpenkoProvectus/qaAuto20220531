@@ -9,16 +9,18 @@ import org.openqa.selenium.WebDriver;
 
 public class MainPage extends BasePage {
 
-  public MainPage(WebDriver driver) {
-     super(driver);
+  public MainPage() {
+     super();
   }
 
   public LoginPage goToAuthPage() {
     driver.findElement(By.linkText("Form Authentication")).click();
-    return new LoginPage(driver);
+    return new LoginPage();
   }
 
-  public void goToDynControls() {
+  public DynamicControlsPage goToDynControls() {
     driver.findElement(By.linkText("Dynamic Controls")).click();
+    return new DynamicControlsPage(driver);
   }
+
 }

@@ -1,0 +1,6 @@
+Username,Group,Name,Lastname
+user1,Users,Name1,Lastname1
+user2,Admin,Name2,Lastname2
+user3,Guest,Name3,Lastname3
+user4,Users,Name4,Lastname4
+user5,Guest,Name5,Lastname5
