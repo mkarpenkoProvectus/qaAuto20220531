@@ -1,10 +1,8 @@
 package com.provectus.restTests;
 
-import com.github.javafaker.Faker;
 import com.provectus.rest.RestTest;
 import com.provectus.rest.entities.Pet;
 import com.provectus.rest.entities.User;
-import org.testng.annotations.Test;
 
 import java.io.IOException;
 
@@ -28,13 +26,5 @@ public class PetRestTest {
 
     restTest.serializePet(pet);
 
-    User user = new User();
-
-  }
-
-  @Test
-  public void test() {
-    Faker faker = new Faker();
-    System.out.println(faker.finance().creditCard());
   }
 }
