@@ -3,6 +3,7 @@ package com.provectus.restTests;
 import com.provectus.rest.RestTest;
 import com.provectus.rest.entities.Pet;
 import com.provectus.rest.entities.User;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 
@@ -11,7 +12,7 @@ import java.io.IOException;
  */
 
 public class PetRestTest {
-//  @Test
+  @Test
   public void petRestTest() throws IOException {
     RestTest restTest = new RestTest();
 //    String id = restTest.createPet("testPet");
